@@ -32,6 +32,10 @@ public class Task {
 
     // Methods
 
+    public boolean completeTask() {
+        return this.taskStatus = true;
+    }
+
     // This method converts the boolean version of taskStatus to a "Complete" or "Pending" status
     public String convertBooleanStatusToString() {
         if (this.taskStatus) {
