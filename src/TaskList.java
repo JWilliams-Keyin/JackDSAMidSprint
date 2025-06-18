@@ -79,4 +79,20 @@ public class TaskList {
         }
         sizeOfList--;
     }
+
+    public void printTaskList() {
+        if (headNode == null) {
+            System.out.println("Task list does not exist");
+        } else {
+            ListNode tempNode = headNode;
+
+            for (int i = 0; i < sizeOfList; i++) {
+                System.out.println("Task " + (i + 1) + ":");
+                System.out.print(tempNode.task.toString());
+                System.out.println();
+
+                tempNode = tempNode.next;
+            }
+        }
+    }
 }

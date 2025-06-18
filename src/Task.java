@@ -46,7 +46,7 @@ public class Task {
     }
 
     public String toString() {
-        return "Task: " + taskDescription + "\n" +
+        return taskDescription + "\n" +
                 "Status: " + convertBooleanStatusToString();
     }
 }
