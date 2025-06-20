@@ -1,3 +1,10 @@
+/* Author: Jack Williams
+ * Dates: June 18th - June 20th
+ * Description: This is the main file the runs the program. It handles adding
+ *              users to an ArrayList and lets the user interact with the
+ *              methods of the program */
+
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
