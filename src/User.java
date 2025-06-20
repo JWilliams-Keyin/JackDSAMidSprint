@@ -35,6 +35,12 @@ public class User {
         userTasks.insertTaskList(newTask, userTasks.sizeOfList);
     }
 
+    public void markTaskAsComplete(int taskLocation) {
+        Task taskToMark = userTasks.getTaskByLocation(taskLocation);
+
+        taskToMark.completeTask();
+    }
+
     public String toString() {
         return "Username: " + userName +
                 "\n" + userTasks.toString();
