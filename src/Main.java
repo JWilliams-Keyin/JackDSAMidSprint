@@ -40,6 +40,7 @@ public class Main {
             System.out.println("5. Quit");
 
             String optionInput = scanner.next();
+            scanner.nextLine();
 
             if (optionInput.equals("1")) {
                 System.out.println(" ");
@@ -62,6 +63,7 @@ public class Main {
                 System.out.println(" ");
                 System.out.println("Enter the number of the user you would like to access (1, 2, 3, ...):");
                 int userIndex = scanner.nextInt();
+                scanner.nextLine();
 
                 System.out.println("Enter the description of the new task:");
                 String newTaskDescription = scanner.nextLine();
