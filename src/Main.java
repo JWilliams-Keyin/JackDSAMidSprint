@@ -42,43 +42,55 @@ public class Main {
             String optionInput = scanner.next();
 
             if (optionInput.equals("1")) {
+                System.out.println(" ");
                 System.out.print("Enter the name of the new user: ");
-                String newUserName = scanner.next();
+                String newUserName = scanner.nextLine();
 
                 User newUser = new User(newUserName);
                 usersArrayList.add(newUser);
 
                 System.out.println("User " + newUserName +  " has been added!");
+                System.out.println(" ");
             } else if (optionInput.equals("2")) {
                 for (int i = 0; i < usersArrayList.size(); i++) {
+                    System.out.println(" ");
                     String userTasks = usersArrayList.get(i).toString();
                     System.out.println(userTasks);
                 }
+                System.out.println(" ");
             } else if (optionInput.equals("3")) {
+                System.out.println(" ");
                 System.out.println("Enter the number of the user you would like to access (1, 2, 3, ...):");
                 int userIndex = scanner.nextInt();
 
                 System.out.println("Enter the description of the new task:");
-                String newTaskDescription = scanner.next();
+                String newTaskDescription = scanner.nextLine();
 
                 Task newTask = new Task(newTaskDescription);
                 usersArrayList.get(userIndex - 1).addTaskToUserTasks(newTask);
 
                 System.out.println("New task given!");
+                System.out.println(" ");
             } else if (optionInput.equals("4")) {
+                System.out.println(" ");
                 System.out.println("Enter the number of the user you would like to access (1, 2, 3, ...):");
                 int userIndex = scanner.nextInt();
+                System.out.println(" ");
 
                 System.out.println("Enter the number of the task you want to complete (1, 2, 3, ...):");
                 int taskIndex = scanner.nextInt();
+                System.out.println(" ");
 
                 usersArrayList.get(userIndex - 1).markTaskAsComplete(taskIndex - 1);
 
                 System.out.println("Task complete!");
+                System.out.println(" ");
             } else if (optionInput.equals("5")) {
                 runProgram = false;
             } else {
+                System.out.println(" ");
                 System.out.println("Please enter a valid number");
+                System.out.println(" ");
             }
         }
     }
