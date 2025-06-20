@@ -13,7 +13,6 @@ public class User {
 
     // Getters & Setters
 
-
     public String getUserName() {
         return userName;
     }
