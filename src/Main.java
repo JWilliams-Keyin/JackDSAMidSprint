@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,16 +42,39 @@ public class Main {
             String optionInput = scanner.next();
 
             if (optionInput.equals("1")) {
+                System.out.print("Enter the name of the new user: ");
+                String newUserName = scanner.next();
 
+                User newUser = new User(newUserName);
+                usersArrayList.add(newUser);
+
+                System.out.println("User " + newUserName +  " has been added!");
             } else if (optionInput.equals("2")) {
                 for (int i = 0; i < usersArrayList.size(); i++) {
                     String userTasks = usersArrayList.get(i).toString();
                     System.out.println(userTasks);
                 }
             } else if (optionInput.equals("3")) {
+                System.out.println("Enter the number of the user you would like to access (1, 2, 3, ...):");
+                int userIndex = scanner.nextInt();
 
+                System.out.println("Enter the description of the new task:");
+                String newTaskDescription = scanner.next();
+
+                Task newTask = new Task(newTaskDescription);
+                usersArrayList.get(userIndex - 1).addTaskToUserTasks(newTask);
+
+                System.out.println("New task given!");
             } else if (optionInput.equals("4")) {
+                System.out.println("Enter the number of the user you would like to access (1, 2, 3, ...):");
+                int userIndex = scanner.nextInt();
 
+                System.out.println("Enter the number of the task you want to complete (1, 2, 3, ...):");
+                int taskIndex = scanner.nextInt();
+
+                usersArrayList.get(userIndex - 1).markTaskAsComplete(taskIndex - 1);
+
+                System.out.println("Task complete!");
             } else if (optionInput.equals("5")) {
                 runProgram = false;
             } else {
