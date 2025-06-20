@@ -57,54 +57,22 @@ public class TaskList {
         sizeOfList++;
     }
 
-    public void deleteFromTaskList(int location) {
-        if (location < 0 || location >= sizeOfList) {
-            System.out.println("Inputted location is out of bounds of list");
-            return;
-        } else if (location == 0) {
-            headNode = headNode.next;
-        } else if (location == sizeOfList - 1) {
-            ListNode tempNode = headNode;
-            int index = 0;
-
-            while (index < location -1) {
-                tempNode = tempNode.next;
-                index++;
-            }
-
-            tempNode.next = null;
-            tailNode = tempNode;
-        } else {
-            ListNode tempNode = headNode;
-            int index = 0;
-
-            while (index < location -1) {
-                tempNode = tempNode.next;
-                index++;
-            }
-
-            tempNode.next = tempNode.next.next;
-        }
-        sizeOfList--;
-    }
-
     public String toString() {
-        StringBuilder results = null;
+        StringBuilder results = new StringBuilder();
 
         if (headNode == null) {
-            results = new StringBuilder("Task list does not exist");
+            results.append("Task list does not exist");
         } else {
             ListNode tempNode = headNode;
 
             for (int i = 0; i < sizeOfList; i++) {
                 assert false;
-                results.append("Task ").append(i + 1).append(":").append(tempNode.task.toString()).append("\n");
+                results.append("Task ").append(i + 1).append(": ").append(tempNode.task.toString()).append("\n");
 
                 tempNode = tempNode.next;
             }
         }
 
-        assert results != null;
         return results.toString();
     }
 }
