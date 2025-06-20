@@ -6,7 +6,6 @@ public class TaskList {
     public ListNode tailNode;
     public int sizeOfList;
 
-
     // Methods
 
     public ListNode createTaskList(Task nodeValue){
