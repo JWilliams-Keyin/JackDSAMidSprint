@@ -49,7 +49,7 @@ public class TaskList {
         sizeOfList++;
     }
 
-    public void deleteFromLinkedList(int location) {
+    public void deleteFromTaskList(int location) {
         if (location < 0 || location >= sizeOfList) {
             System.out.println("Inputted location is out of bounds of list");
             return;
@@ -80,19 +80,23 @@ public class TaskList {
         sizeOfList--;
     }
 
-    public void printTaskList() {
+    public String toString() {
+        StringBuilder results = null;
+
         if (headNode == null) {
-            System.out.println("Task list does not exist");
+            results = new StringBuilder("Task list does not exist");
         } else {
             ListNode tempNode = headNode;
 
             for (int i = 0; i < sizeOfList; i++) {
-                System.out.println("Task " + (i + 1) + ":");
-                System.out.print(tempNode.task.toString());
-                System.out.println();
+                assert false;
+                results.append("Task ").append(i + 1).append(":").append(tempNode.task.toString()).append("\n");
 
                 tempNode = tempNode.next;
             }
         }
+
+        assert results != null;
+        return results.toString();
     }
 }
