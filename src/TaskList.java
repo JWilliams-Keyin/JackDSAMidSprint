@@ -18,6 +18,16 @@ public class TaskList {
         return headNode;
     }
 
+    public Task getTaskByLocation(int location) {
+        ListNode tempNode = headNode;
+
+        for (int i = 0; i < location; i++) {
+            tempNode = tempNode.next;
+        }
+
+        return tempNode.task;
+    }
+
     public void insertTaskList(Task nodeValue, int location) {
         ListNode newNode = new ListNode();
         newNode.task = nodeValue;
