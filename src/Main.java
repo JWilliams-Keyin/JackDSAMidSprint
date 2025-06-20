@@ -1,10 +1,13 @@
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.function.Consumer;
 
 public class Main {
     public static void main(String[] args) {
 
-        // Initialize ArrayList of users
+        // Initialize ArrayList of users and scanner
         ArrayList<User> usersArrayList = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
 
         // Add sample users and tasks to the array
         User user1 = new User("Bob Kirkland");
@@ -25,14 +28,36 @@ public class Main {
 
         // Main Program
 
-        while (true) {
+        boolean runProgram = true;
+
+        while (runProgram) {
             System.out.println("Task Manager");
+            System.out.println("Enter the number of the option you wish to choose");
             System.out.println("Options:");
             System.out.println("1. Add a new user");
             System.out.println("2. Print tasks for all users");
             System.out.println("3. Add a task to a user's list");
             System.out.println("4. Complete a task from a user's list");
             System.out.println("5. Quit");
+
+            String optionInput = scanner.next();
+
+            if (optionInput.equals("1")) {
+
+            } else if (optionInput.equals("2")) {
+                for (int i = 0; i < usersArrayList.size(); i++) {
+                    String userTasks = usersArrayList.get(i).toString();
+                    System.out.println(userTasks);
+                }
+            } else if (optionInput.equals("3")) {
+
+            } else if (optionInput.equals("4")) {
+
+            } else if (optionInput.equals("5")) {
+                runProgram = false;
+            } else {
+                System.out.println("Please enter a valid number");
+            }
         }
     }
 }
