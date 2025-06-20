@@ -8,24 +8,23 @@ public class TaskList {
 
     // Methods
 
-    public ListNode createTaskList(Task nodeValue){
+    public void createTaskList(Task nodeValue){
         ListNode newNode = new ListNode();
         newNode.next = null;
         newNode.task = nodeValue;
         headNode = newNode;
         tailNode = newNode;
         sizeOfList = 1;
-        return headNode;
     }
 
-    public Task getTaskByLocation(int location) {
+    public boolean completeTaskByLocation(int location) {
         ListNode tempNode = headNode;
 
         for (int i = 0; i < location; i++) {
             tempNode = tempNode.next;
         }
 
-        return tempNode.task;
+        return tempNode.task.completeTask();
     }
 
     public void insertTaskList(Task nodeValue, int location) {
