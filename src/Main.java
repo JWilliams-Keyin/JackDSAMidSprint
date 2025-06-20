@@ -20,10 +20,19 @@ public class Main {
         Task task1 = new Task("Take out the trash");
         Task task2 = new Task("Do the dishes");
         Task task3 = new Task("Mop the floor");
+        Task task4 = new Task("Clean the bathroom");
+        Task task5 = new Task("Vacuum");
+        Task task6 = new Task("Put away groceries");
+        Task task7 = new Task("Consolidate debt");
+
 
         usersArrayList.get(0).addTaskToUserTasks(task1);
         usersArrayList.get(1).addTaskToUserTasks(task2);
-        usersArrayList.get(2).addTaskToUserTasks(task3);
+        usersArrayList.get(0).addTaskToUserTasks(task3);
+        usersArrayList.get(1).addTaskToUserTasks(task4);
+        usersArrayList.get(0).addTaskToUserTasks(task5);
+        usersArrayList.get(1).addTaskToUserTasks(task6);
+        usersArrayList.get(2).addTaskToUserTasks(task7);
 
         // Main Program
 
