@@ -1,3 +1,10 @@
+/* Author: Jack Williams
+ * Dates: June 18th - June 20th
+ * Description: The User class is a POJO that handles the data related to Users that
+ *              are added to an ArrayList. The data it holds includes userName
+ *              and userTasks. It has methods to add a task to the list, complete a
+ *              task, and print all tasks */
+
 public class User {
 
     // Attributes

@@ -1,3 +1,9 @@
+/* Author: Jack Williams
+ * Dates: June 18th - June 20th
+ * Description: The TaskList class creates a single LinkedList that holds Tasks. It
+ *              has methods to create a list, complete a task, insert a task, and
+ *              print the tasks in the list */
+
 public class TaskList {
 
     // Attributes

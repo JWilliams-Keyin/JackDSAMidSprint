@@ -1,3 +1,10 @@
+/* Author: Jack Williams
+ * Dates: June 18th - June 20th
+ * Description: The Task class is a POJO that handles tasks that are to be added to TaskLists.
+ *              The data it holds is the taskDescription, and taskStatus. It has methods to
+ *              complete a task, and convert the boolean status of that task to a string of
+ *              complete or pending */
+
 public class Task {
 
     // Attributes
